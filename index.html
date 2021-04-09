@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font/Poppins/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('.share').on('click', () => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Web Share API Draft',
+                text: 'Take a look at this spec!',
+                url: 'https://wicg.github.io/web-share/#share-method',
+            })
+            .then(() => console.log('Successful share'))
+            .catch((error) => console.log('Error sharing', error));
+        } else {
+            console.log('Share not supported on this browser, do it the old way.');
+        }
+        });
+    </script>
 </head>
 <body>
     <div class="container py-2">
@@ -60,9 +76,19 @@
                         <button class="up-btn">Browse</button>
                     </div>
 
-                    <input type="submit" value="Download">
+                    <input type="submit" value="Download" class="show-modal">
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div class="pop-modal">
+        <div class="img-modal">
+            <span class="text-brand close-btn">&#x2715;</span>
+            <div class="modal-img">
+                <img src="img/Untitled-4.png" alt="">
+            </div>
+            <button class="text-brand share">Share</button>
         </div>
     </div>
 
@@ -98,5 +124,15 @@
         <p class="text-center mt-5 copy text-brand">Copyright &copy; 2021</p>
     </footer>
 
+
+    <script>
+        document.querySelector('.show-modal').onclick = (e)=>{
+            e.preventDefault();
+            document.querySelector('.pop-modal').classList.add('active');
+        };
+        document.querySelector('.close-btn').onclick = ()=>{
+            document.querySelector('.pop-modal').classList.remove('active');
+        };
+    </script>
 </body>
 </html>

@@ -87,8 +87,8 @@ h3, .text-brand {
     }
         .half-1 img {
             position: absolute;
-            width: 150px;
-            right: 30px;
+            width: 300px;
+            right: -80px;
             top: 30px;
         }
     .lp-1h {
@@ -211,8 +211,59 @@ h3, .text-brand {
         padding: 20px;
         border: 1px solid #fff;
     }
+.pop-modal {
+    display: none;
+}
+.img-modal {
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    height: 60vh;
+    position: relative;
+    box-shadow: 2px 2px 2px 2px #ccc, -2px -2px 2px 2px #ccc;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+    .close-btn {
+        font-size: 2rem;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+    }
+    .modal-img img {
+        width: 300px;
+        height: 300px;
+        margin: 20px 0;
+    }
+    .img-modal .share {
+        box-sizing: border-box;
+        display: block;
+        font-size: 1.5rem;
+        border: 2px solid #02523C;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+    }
 
 @media screen and (max-width:1024px) {
+    .pop-modal {
+        width: 100%;
+        position: fixed;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: scale(0);
+        transition: 0.4s ease;
+        z-index: 999;
+    }
+        .pop-modal.active {
+            transform: scale(1) translate(-50%, -50%);
+        }
     .logo img {
         height: 60px;
         width: 60px;
