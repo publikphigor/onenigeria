@@ -271,6 +271,9 @@ h3, .text-brand {
     .lp {
         flex-direction: column;
     }
+    .lp-half {
+        width: 100%;
+    }
     .lp-cards {
         flex-direction: column;
         align-items: center;
