@@ -3,13 +3,19 @@ html {
     font-size: 14px;
 }
 
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 10px;
+    }
+}
+
 body {
     padding: 0;
     margin: 0;
     font-family: 'Poppins';
 }
 
-h3 {
+h3, .text-brand {
     color: #02523C;
 }
 
@@ -201,6 +207,19 @@ h3 {
         border: 1px solid #fff;
     }
 
+@media screen and (max-width:1024px) {
+    .lp {
+        flex-direction: column;
+    }
+    .lp-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+        .lp-card {
+            margin-bottom: 20px;
+        }
+}
+
 footer  {
     box-sizing: border-box;
 }
@@ -240,6 +259,7 @@ footer  {
             }
     .ft-h2 {
         width: 50%;
+        box-sizing: border-box;
     }
         .upload-pic {
             width: 100%;
@@ -275,3 +295,51 @@ footer  {
             background: #02523C;
             color: #fff;
         }
+@media screen and (max-width:1024px) {
+    .join {
+        width: 95%;
+    }
+    .ft-h1 {
+        margin: 10px auto;
+    }
+    .ft-h2 {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+/* gallery */
+.gallery h3 {
+    font-size: 2rem;
+    margin-bottom: 2px;
+}
+.g-line {
+    width: 120px;
+    border: 0;
+    height: 3px;
+    background: #02523C;
+    margin: 0;
+}
+.gallery img {
+    width: 200px;
+    height: 200px;
+    margin: 0 10px 10px 0;
+}
+.load-more {
+    padding: 10px 30px;
+    margin: 20px auto;
+    border: 2px solid #02523C;
+    color: #02523C;
+    background: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: block;
+}
+
+    @media screen and (max-width:1024px) {
+        .gallery img {
+            width: 80px;
+            height: 80px;
+            margin: 0 5px 5px 0;
+        }
+    }
