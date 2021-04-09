@@ -15,6 +15,11 @@ body {
     font-family: 'Poppins';
 }
 
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
 h3, .text-brand {
     color: #02523C;
 }
@@ -208,6 +213,10 @@ h3, .text-brand {
     }
 
 @media screen and (max-width:1024px) {
+    .logo img {
+        height: 60px;
+        width: 60px;
+    }
     .lp {
         flex-direction: column;
     }
@@ -225,7 +234,7 @@ footer  {
 }
     .join {
         width: 50%;
-        margin: 100px auto;
+        margin: 50px auto;
     }
     .ft-h1 {
         width: 290px;
@@ -336,10 +345,64 @@ footer  {
     display: block;
 }
 
+/* testimony */
+#testimonySlide {
+    height: 250px;
+}
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        background: #fff;
+        border: 1px solid #02523C;
+        border-radius: 50%;
+    }
+        .carousel-indicators li.active {
+            background: #02523C;
+        }
+.testimony-img {
+    margin: 0;
+    margin-right: 5%;
+}
+    .testimony-img img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid #02523C;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .test-name {
+        text-align: center;
+        font-size: 1rem;
+    }
+.testimony-text {
+    background: #D5FDF2;
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+}
+    .testimony-text p {
+        color: #02523C;
+    }
+
     @media screen and (max-width:1024px) {
         .gallery img {
             width: 80px;
             height: 80px;
             margin: 0 5px 5px 0;
+        }
+        .g-line {
+            width: 70px;
+        }
+        .carousel-item .d-flex {
+            flex-direction: column;
+        }
+        .testimony-text {
+            width: 100%;
+        }
+        #testimonySlide {
+            height: 350px;
         }
     }
